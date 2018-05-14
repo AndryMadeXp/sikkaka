@@ -1,0 +1,28 @@
+<html>
+
+
+<head>
+    
+    <meta charset="utf-8">
+    <title>img day</title>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+         <body>
+             <ul id="slides">
+<li class="slide showing"><img src="img/001.jpg" height="300" width="785"></li>          
+<li class="slide"><img src="img/002.jpg" height="300" width="785"></li>     
+<li class="slide"><img src="img/003.jpg" height="300" width="785"></li>
+<li class="slide"><img src="img/004.jpg" height="300" width="785"></li>
+                 <script>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+function nextSlide() {
+slides[currentSlide].className = 'slide';
+currentSlide = (currentSlide+1)%slides.length;
+slides[currentSlide].className = 'slide showing';}                
+</script>
+</ul>
+</body>
+</html>
